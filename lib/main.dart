@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mark_1/counter_class.dart';
+import 'package:flutter_mark_1/features/dynamic_widgets/presentation/pages/dynamic_widget_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,6 +58,14 @@ class _MyHomePageState extends State<MyHomePage> {
               '${counterClass.val}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (builder) => const DynamicWidgetsPage()));
+                },
+                child: const Text("Dynamic Widget Page"))
           ],
         ),
       ),
