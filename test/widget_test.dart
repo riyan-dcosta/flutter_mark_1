@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mark_1/counter_class.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:flutter_mark_1/main.dart';
 
 void main() {
-
+  group("counter class Unit Test", () {
+    final counter = Counter();
+    test("counter initial value", () {
+      expect(counter.val, -1);
+    });
+    test("counter class test", () {
+      counter.increment();
+      expect(counter.val, 1);
+    });
+  });
+  return;
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
 
