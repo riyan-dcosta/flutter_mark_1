@@ -16,6 +16,7 @@ dependencies:
   dev: ^1.0.0
   json_serializable: ^6.7.1
   json_dynamic_widget: ^6.1.0+2
+  go_router: ^10.0.0
 
 dev_dependencies:
   flutter_test:
@@ -26,6 +27,7 @@ dev_dependencies:
   mockito: ^5.4.2
   build_runner: ^2.4.6
   freezed: ^2.4.1
+  go_router_builder: ^2.3.0
 
 flutter:
   uses-material-design: true

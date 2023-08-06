@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mark_1/core/core_route/go_router/go_router_core.dart';
 import 'package:flutter_mark_1/counter_class.dart';
-import 'package:flutter_mark_1/features/dynamic_widgets/presentation/pages/dynamic_widget_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,21 +11,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: GoRouterCore.instance,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -40,12 +38,16 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void onClickDynamicWidget({required BuildContext context}) {
+    const DynamicPageRoute().go(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        title: const Text("Home Page"),
       ),
       body: Center(
         child: Column(
@@ -59,12 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (builder) => const DynamicWidgetsPage()));
-                },
+                onPressed: () => onClickDynamicWidget(context: context),
                 child: const Text("Dynamic Widget Page"))
           ],
         ),
