@@ -1,0 +1,28 @@
+{
+  "type": "scaffold",
+  "args": {
+    "appBar": {
+      "type": "app_bar",
+      "args": {
+        "title": {
+          "type": "text",
+          "args": {
+            "text": "Hello Dynamic"
+          }
+        }
+      }
+    },
+    "body": {
+      "type": "elevated_button",
+      "args": {
+        "onPressed": "${null}",
+        "child": {
+          "type": "text",
+          "args": {
+            "text": "press me!"
+          }
+        }
+      }
+    }
+  }
+}
