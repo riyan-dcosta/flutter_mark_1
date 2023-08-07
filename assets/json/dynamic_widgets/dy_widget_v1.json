@@ -1,36 +1,52 @@
 {
-  "type": "scaffold",
-  "args": {
-    "appBar": {
-      "type": "app_bar",
-      "args": {
-        "title": {
-          "type": "text",
-          "args": {
-            "text": "Hello Dynamic"
-          }
-        }
-      }
-    },
-    "body": {
-      "type": "column",
-      "children": [
-        {
-          "type": "elevated_button",
-          "child": {
+  "type": "safe_area",
+  "child": {
+    "type": "scaffold",
+    "args": {
+      "appBar": {
+        "type": "app_bar",
+        "args": {
+          "title": {
             "type": "text",
             "args": {
-              "text": "hello"
+              "text": "Hello Dynamic"
             }
           }
-        },
-        {
-          "type": "text",
-          "args": {
-            "text": "press me!"
-          }
         }
-      ]
+      },
+      "body": {
+        "type": "container",
+        "args": {
+          "alignment": "center",
+          "color": "#8490b2"
+        },
+        "child": {
+          "type": "column",
+          "args": {
+            "mainAxisAlignment": "end"
+          },
+          "children": [
+            {
+              "type": "elevated_button",
+              "args": {
+                "onPressed": "${func1()}"
+              },
+              "child": {
+                "type": "text",
+                "args": {
+                  "text": "hello"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "args": {
+                "text": "press me!"
+              }
+            }
+          ]
+        }
+      }
     }
   }
 }

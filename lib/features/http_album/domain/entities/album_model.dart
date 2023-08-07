@@ -14,3 +14,12 @@ class Album with _$Album {
 
   factory Album.fromJson(Map<String, dynamic> json) => _$AlbumFromJson(json);
 }
+
+@freezed
+class AlbumState with _$AlbumState {
+  const factory AlbumState.initial() = Initial;
+
+  const factory AlbumState.loading() = _AlbbumLoading;
+
+  const factory AlbumState.loaded() = _AlbumLoaded;
+}
