@@ -1,0 +1,12 @@
+{
+  "type": "elevated_button",
+  "args": {
+    "onPressed": "${incrementButtonClick()}"
+  },
+  "child": {
+    "type": "text",
+    "args": {
+      "text": "Increment Value"
+    }
+  }
+}
