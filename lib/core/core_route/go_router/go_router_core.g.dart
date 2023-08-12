@@ -18,6 +18,10 @@ RouteBase get $homeRoute => GoRouteData.$route(
           path: 'dynamic',
           factory: $DynamicPageRouteExtension._fromState,
         ),
+        GoRouteData.$route(
+          path: 'profile',
+          factory: $ProfilePageRouteExtension._fromState,
+        ),
       ],
     );
 
@@ -44,6 +48,24 @@ extension $DynamicPageRouteExtension on DynamicPageRoute {
 
   String get location => GoRouteData.$location(
         '/dynamic',
+      );
+
+  void go(BuildContext context) => context.go(location);
+
+  Future<T?> push<T>(BuildContext context) => context.push<T>(location);
+
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
+
+  void replace(BuildContext context) => context.replace(location);
+}
+
+extension $ProfilePageRouteExtension on ProfilePageRoute {
+  static ProfilePageRoute _fromState(GoRouterState state) =>
+      const ProfilePageRoute();
+
+  String get location => GoRouteData.$location(
+        '/profile',
       );
 
   void go(BuildContext context) => context.go(location);
