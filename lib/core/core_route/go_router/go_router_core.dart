@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mark_1/core/core_route/route_path/route_paths.dart';
 import 'package:flutter_mark_1/features/dynamic_widgets/presentation/pages/dynamic_widget_page.dart';
-import 'package:flutter_mark_1/features/home_page/presentation/pages/home_page.dart';
+import 'package:flutter_mark_1/features/home_page/presentation/pages/home_bottom_nav_page.dart';
 import 'package:flutter_mark_1/features/profile_page/presentation/pages/profile_page.dart';
 import 'package:go_router/go_router.dart';
 
@@ -29,5 +29,6 @@ class HomeRoute extends GoRouteData {
   const HomeRoute();
 
   @override
-  Widget build(BuildContext context, GoRouterState state) => const MyHomePage();
+  Widget build(BuildContext context, GoRouterState state) =>
+      const HomeBottomNavPage();
 }

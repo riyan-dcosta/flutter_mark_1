@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mark_1/core/core_route/go_router/go_router_core.dart';
-import 'package:flutter_mark_1/features/profile_page/presentation/pages/profile_page.dart';
 
 class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({super.key});
+  const BottomNavBar(
+      {super.key, required this.initialIndex, required this.onTap});
+
+  final int initialIndex;
+  final ValueChanged<int> onTap;
 
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();
@@ -19,19 +21,14 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   void initState() {
     super.initState();
+    _activePageIndex = widget.initialIndex;
   }
 
   _bottomNavOnTap(int index, BuildContext context) {
     setState(() {
       _activePageIndex = index;
     });
-    switch (index) {
-      case 0:
-        const HomeRoute().go(context);
-      case 1:
-      default:
-        const ProfilePageRoute().go(context);
-    }
+    widget.onTap.call(index);
   }
 
   @override
