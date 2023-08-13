@@ -7,3 +7,10 @@ class DynamicPageRoute extends GoRouteData {
   Widget build(BuildContext context, GoRouterState state) =>
       const DynamicWidgetsPage();
 }
+
+class ProfilePageRoute extends GoRouteData {
+  const ProfilePageRoute();
+
+  Widget build(BuildContext context, GoRouterState state) =>
+      const ProfilePage();
+}
