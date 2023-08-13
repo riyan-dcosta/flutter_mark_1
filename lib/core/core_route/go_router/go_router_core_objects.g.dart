@@ -14,3 +14,9 @@ class ProfilePageRoute extends GoRouteData {
   Widget build(BuildContext context, GoRouterState state) =>
       const ProfilePage();
 }
+
+class EncryptionPageRoute extends GoRouteData {
+  const EncryptionPageRoute();
+
+  Widget build(BuildContext context, GoRouterState state) => const CryptoPage();
+}

@@ -20,6 +20,10 @@ class _MyHomePageState extends State<MyHomePage> {
     const DynamicPageRoute().go(context);
   }
 
+  onClickEncryptionPage({required BuildContext context}) {
+    const EncryptionPageRoute().go(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
                 onPressed: () => onClickDynamicWidget(context: context),
-                child: const Text("Dynamic Widget Page"))
+                child: const Text("Dynamic Widget Page")),
+            ElevatedButton(
+                onPressed: () => onClickEncryptionPage(context: context),
+                child: const Text("Encryption Page"))
           ],
         ),
       ),

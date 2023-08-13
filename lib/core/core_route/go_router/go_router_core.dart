@@ -3,6 +3,7 @@ import 'package:flutter_mark_1/core/core_route/route_path/route_paths.dart';
 import 'package:flutter_mark_1/features/dynamic_widgets/presentation/pages/dynamic_widget_page.dart';
 import 'package:flutter_mark_1/features/home_page/presentation/pages/home_bottom_nav_page.dart';
 import 'package:flutter_mark_1/features/profile_page/presentation/pages/profile_page.dart';
+import 'package:flutter_mark_1/features/encryption_page/presentation/pages/crypto_page.dart';
 import 'package:go_router/go_router.dart';
 
 part 'go_router_core.g.dart';
@@ -19,9 +20,10 @@ class GoRouterCore extends GoRouteData {
 }
 
 @TypedGoRoute<HomeRoute>(
-  path: RoutePaths.home,
+  path: RoutePaths.home + RoutePaths.cryptoPage,
   routes: [
     TypedGoRoute<DynamicPageRoute>(path: RoutePaths.dynamic),
+    TypedGoRoute<EncryptionPageRoute>(path: RoutePaths.cryptoPage),
     TypedGoRoute<ProfilePageRoute>(path: RoutePaths.profile),
   ],
 )
