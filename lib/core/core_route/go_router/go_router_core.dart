@@ -20,7 +20,7 @@ class GoRouterCore extends GoRouteData {
 }
 
 @TypedGoRoute<HomeRoute>(
-  path: RoutePaths.home + RoutePaths.cryptoPage,
+  path: RoutePaths.home,
   routes: [
     TypedGoRoute<DynamicPageRoute>(path: RoutePaths.dynamic),
     TypedGoRoute<EncryptionPageRoute>(path: RoutePaths.cryptoPage),
