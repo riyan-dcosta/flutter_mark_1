@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: dart-lang/setup-dart@v1
+      - uses: DanTup/gh-actions/setup-flutter@master
       - name: Install dependencies
         run: dart pub get
       - name: Format Dart
