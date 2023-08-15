@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mark_1/core/crypto/crypto_core/crypto_core.dart';
 import 'package:flutter_mark_1/features/common/widgets/m1_text_widgets.dart';
+import 'package:encrypt_dart_package/encrypt_dart_package.dart';
 
 class CryptoTestWidget extends StatefulWidget {
   const CryptoTestWidget({super.key});
@@ -17,12 +18,15 @@ class _CryptoTestWidgetState extends State<CryptoTestWidget> {
   String? _decryptText;
 
   _encryptMessageButtonPress() {
-    if(_inputText.isEmpty){
+    if (_inputText.isEmpty) {
       return null;
     }
+    _encryptedText = SecretBase().encryptMessage(message: _inputText);
+    _decryptText = SecretBase().decryptMessage(message: _encryptedText);
+    setState(() {});
+    return;
     _encryptedText = CryptoMessage().encryptMessage(message: _inputText);
-    _decryptText =
-        CryptoMessage().decryptMessage(message: _encryptedText);
+    _decryptText = CryptoMessage().decryptMessage(message: _encryptedText);
     setState(() {});
   }
 

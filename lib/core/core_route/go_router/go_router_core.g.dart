@@ -11,7 +11,7 @@ List<RouteBase> get $appRoutes => [
     ];
 
 RouteBase get $homeRoute => GoRouteData.$route(
-      path: '/crypto',
+      path: '/',
       factory: $HomeRouteExtension._fromState,
       routes: [
         GoRouteData.$route(
@@ -33,7 +33,7 @@ extension $HomeRouteExtension on HomeRoute {
   static HomeRoute _fromState(GoRouterState state) => const HomeRoute();
 
   String get location => GoRouteData.$location(
-        '/crypto',
+        '/',
       );
 
   void go(BuildContext context) => context.go(location);
@@ -51,7 +51,7 @@ extension $DynamicPageRouteExtension on DynamicPageRoute {
       const DynamicPageRoute();
 
   String get location => GoRouteData.$location(
-        '/crypto/dynamic',
+        '/dynamic',
       );
 
   void go(BuildContext context) => context.go(location);
@@ -69,7 +69,7 @@ extension $EncryptionPageRouteExtension on EncryptionPageRoute {
       const EncryptionPageRoute();
 
   String get location => GoRouteData.$location(
-        '/crypto/crypto',
+        '/crypto',
       );
 
   void go(BuildContext context) => context.go(location);
@@ -87,7 +87,7 @@ extension $ProfilePageRouteExtension on ProfilePageRoute {
       const ProfilePageRoute();
 
   String get location => GoRouteData.$location(
-        '/crypto/profile',
+        '/profile',
       );
 
   void go(BuildContext context) => context.go(location);

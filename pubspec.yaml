@@ -19,6 +19,12 @@ dependencies:
   go_router: ^10.0.0
   crypto: ^3.0.3
 
+  #  crypto
+  encrypt_dart_package:
+    git:
+      url : git@github.com:riyan-dcosta/encrypt_dart_package.git
+      ref: main
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
