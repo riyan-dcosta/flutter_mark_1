@@ -22,7 +22,7 @@ dependencies:
   #  crypto
   encrypt_dart_package:
     git:
-      url : git@github.com:riyan-dcosta/encrypt_dart_package.git
+      url : https://github.com/riyan-dcosta/encrypt_dart_package.git
       ref: main
 
 dev_dependencies:

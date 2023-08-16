@@ -223,7 +223,7 @@ packages:
       path: "."
       ref: main
       resolved-ref: e4f49c7e09a48f99e1414d1707d0693c4328f2f4
-      url: "git@github.com:riyan-dcosta/encrypt_dart_package.git"
+      url: "https://github.com/riyan-dcosta/encrypt_dart_package.git"
     source: git
     version: "1.0.1"
   execution_timer:
