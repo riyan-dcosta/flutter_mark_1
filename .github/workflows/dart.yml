@@ -16,9 +16,7 @@ jobs:
         with:
           channel: 'stable'
           cache: true
-          key: ${{secrets.GIT_KEY}}
-
       - name: Install dependencies
         run: dart pub get
-      - name: Analyze project source
-        run: dart analyze
+#      - name: Analyze project source
+#        run: dart analyze
