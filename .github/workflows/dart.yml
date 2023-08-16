@@ -18,5 +18,7 @@ jobs:
           cache: true
       - name: Install dependencies
         run: dart pub get
+        with :
+          key : ${{secrets.GIT_KEY}}
       - name: Analyze project source
         run: dart analyze
