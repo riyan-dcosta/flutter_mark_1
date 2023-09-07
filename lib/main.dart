@@ -20,4 +20,3 @@ class MarkOne extends StatelessWidget {
     );
   }
 }
-
